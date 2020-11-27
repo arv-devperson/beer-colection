@@ -5,6 +5,7 @@ import { OverviewPage } from 'pages/overview';
 import { EditPage } from 'pages/edit';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import AppHeader from 'components/header/header.component';
 
 const store = configureStore();
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <React.Fragment>
       <Provider store={store}>
+        <AppHeader />
         <Switch>
           <Route path="/overview" exact component={OverviewPage} />
           <Route path="/edit/:id" component={EditPage} />

@@ -1,0 +1,41 @@
+#app-navigation {
+  background-color: #008080;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: sticky;
+  top: 0;
+}
+
+#app-navigation .brand {
+  color: white;
+  font-weight: bold;
+}
+
+#app-navigation .brand a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#app-navigation ul {
+  list-style: none;
+  justify-self: end;
+}
+
+#app-navigation ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+#app-navigation ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 2rem;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#app-navigation ul li a:hover {
+  background-color: #99cccc;
+  color: white;
+}

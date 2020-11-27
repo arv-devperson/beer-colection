@@ -1,3 +1,7 @@
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
