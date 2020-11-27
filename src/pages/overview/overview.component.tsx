@@ -6,6 +6,7 @@ import { AppDispatch } from 'store/app-thunk';
 import ApplicationState from 'store/application-state';
 import { loadBeers } from 'store/beersStore';
 import { goToNextPage, goToPreviousPage } from 'store/uiStore';
+import './overview.style.css';
 
 interface OverviewPageProps {
   beerCollection: StoreModels.BeerCollection;
@@ -36,7 +37,9 @@ function OverviewPage(props: OverviewPageProps) {
         goToPreviousPage={props.goToPreviousPage}
       />
     </div>
-  ) : null;
+  ) : (
+    <div className="loader">Loading...</div>
+  );
 }
 
 const mapStateToProps = (state: ApplicationState) => {
