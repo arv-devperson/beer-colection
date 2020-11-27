@@ -1,0 +1,79 @@
+#main-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+
+  /* Card */
+  .card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 900px;
+    height: 310px;
+    margin: 25px 0;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    .card-image {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .card-body {
+      padding: 1rem;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.4;
+
+      > p {
+        &:first-child {
+          color: rgba(113, 128, 150, 1);
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      > h3 {
+        color: rgba(26, 32, 44, 1);
+        margin-bottom: 1rem;
+      }
+
+      .card-main-text {
+        color: rgba(74, 85, 104, 1);
+      }
+    }
+
+    .card-footer {
+      margin-top: 1.7rem;
+      display: flex;
+      align-items: center;
+
+      > img {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        object-fit: scale-down;
+        margin-right: 0.75rem;
+      }
+
+      .card-signature {
+        font-size: 0.875rem;
+        color: rgba(26, 32, 44, 1);
+        margin-bottom: 0.5rem;
+      }
+
+      .card-motto {
+        color: rgba(113, 128, 150, 1);
+      }
+    }
+  }
+}
