@@ -5,7 +5,7 @@ import './beer-card.styles.scss';
 
 export default function BeerCard({ name, tagline, description, image_url, first_brewed, brewers_tips }: CardProps) {
   return (
-    <main id="main-content">
+    <main className="main-content">
       <div className="card">
         <img className="card-image" src={image_url} alt={name} />
         <div className="card-body">
@@ -19,7 +19,7 @@ export default function BeerCard({ name, tagline, description, image_url, first_
             <img src={image_url} alt="Signature" />
             <div>
               <p className="card-signature">{brewers_tips}</p>
-              <p className="card-motto">{first_brewed}</p>
+              <p className="card-motto">First brewed: {first_brewed}</p>
             </div>
           </div>
         </div>
