@@ -4,4 +4,9 @@ declare module StoreModels {
     isLoading: boolean;
     lastFetched?: number;
   }
+
+  export interface UI {
+    pageSize: number;
+    currentPage: number;
+  }
 }

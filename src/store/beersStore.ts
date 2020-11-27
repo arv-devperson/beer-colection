@@ -36,20 +36,18 @@ export const { beersRequested, beersReceived, beersRequestFailed } = slice.actio
 export default slice.reducer;
 
 // Action Creators
-const url = '/beers';
 
-export const loadBeers = (): AppThunk => async (dispatch, getState: () => ApplicationState) => {
-  try {
-    return dispatch(
-      apiCallBegan({
-        url,
-        onStart: beersRequested.type,
-        onSuccess: beersReceived.type,
-        onError: beersRequestFailed.type
-      })
-    );
-  } catch (error) {
-    // return dispatch(newsRequestFailed('Could not load news.'));
-  }
+export const loadBeers = (currentPage: number = 1, pageSize: number = 10): AppThunk => async (
+  dispatch,
+  getState: () => ApplicationState
+) => {
+  const url = `/beers?page=${currentPage}&per_page=${pageSize}`;
+  return dispatch(
+    apiCallBegan({
+      url,
+      onStart: beersRequested.type,
+      onSuccess: beersReceived.type,
+      onError: beersRequestFailed.type
+    })
+  );
 };
-// Selector
